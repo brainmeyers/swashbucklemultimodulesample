@@ -5,7 +5,7 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 
 builder.Services.AddControllers();
-
+// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen(c=>
 {
@@ -27,8 +27,9 @@ var app = builder.Build();
 app.UseSwagger();
 app.UseSwaggerUI(c =>
 {
-    c.SwaggerEndpoint("/swagger/TimeV1/swagger.json", "Time - V1");
-    c.SwaggerEndpoint("/swagger/WeatherV3/swagger.json", "Weather - V3");
+    c.SwaggerEndpoint("swagger/TimeV1/swagger.json", "Time - V1");
+    c.SwaggerEndpoint("swagger/WeatherV3/swagger.json", "Weather - V3");
+    c.RoutePrefix = String.Empty;
 });
 
 app.UseHttpsRedirection();
