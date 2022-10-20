@@ -1,4 +1,8 @@
-# Steps to Recreate the Problem
+## GitHub Issue
+
+https://github.com/domaindrivendev/Swashbuckle.AspNetCore/issues/2516
+
+## Steps to Recreate the Problem
 
 Build and Run the Application:
 
